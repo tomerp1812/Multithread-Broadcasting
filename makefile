@@ -4,10 +4,10 @@ LDFLAGS = -pthread -lrt
 
 .PHONY: all clean
 
-all: ex3.out
+all: broadcaster
 
-ex3.out: ex3.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o ex3.out ex3.c
+broadcaster: broadcaster.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o broadcaster broadcaster.c
 
 clean:
-	rm -f ex3.out
+	rm -f broadcaster
